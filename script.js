@@ -93,6 +93,21 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Обработчики для кликабельных карточек
+document.addEventListener('DOMContentLoaded', () => {
+    const clickableCards = document.querySelectorAll('.floating-card.clickable');
+    
+    clickableCards.forEach(card => {
+        card.addEventListener('click', function() {
+            // Добавляем эффект нажатия
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 150);
+        });
+    });
+});
+
 // Плавная анимация для кнопок
 document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.btn');

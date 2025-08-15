@@ -173,6 +173,9 @@ body {
 }
 
 .floating-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -182,6 +185,19 @@ body {
     animation: float 6s ease-in-out infinite;
     max-width: 280px;
     margin: 0 auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.floating-card.clickable {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.floating-card.clickable:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .floating-card:nth-child(1) {
@@ -669,4 +685,206 @@ body {
     }
     
 
+} 
+
+.hero-image a.floating-card {
+	cursor: pointer;
+}
+
+.hero-image div.floating-card {
+	cursor: default;
+} 
+
+/* Universities Page */
+.uni-header {
+	padding: 5rem 0 1rem;
+	background: #f8fafc;
+}
+
+.uni-subtitle {
+	text-align: center;
+	color: #6b7280;
+	margin-top: -1rem;
+	margin-bottom: 1rem;
+}
+
+.uni-stats {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	margin-bottom: 1.5rem;
+	flex-wrap: wrap;
+}
+
+.stat-item {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	color: #6b7280;
+	font-size: 0.95rem;
+}
+
+.stat-item i {
+	color: #3b82f6;
+	font-size: 1.1rem;
+}
+
+.stat-item strong {
+	color: #1f2937;
+	font-weight: 600;
+}
+
+.filter-bar {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 1rem 0 2rem;
+}
+
+.filter-group, .filter-select {
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+	background: white;
+	border: 1px solid #e5e7eb;
+	border-radius: 12px;
+	padding: 0.6rem 0.9rem;
+	box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+}
+
+.filter-group input {
+	border: none;
+	outline: none;
+	min-width: 260px;
+	font-size: 0.95rem;
+}
+
+.filter-select select {
+	border: none;
+	outline: none;
+	font-size: 0.95rem;
+	background: transparent;
+}
+
+.uni-list {
+	padding: 1rem 0 4rem;
+}
+
+.uni-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 1.2rem;
+}
+
+.uni-card {
+	background: white;
+	border-radius: 16px;
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+	border: 2px solid transparent;
+	padding: 1.1rem 1.1rem 1rem;
+	transition: all 0.25s ease;
+}
+
+.uni-card:hover {
+	transform: translateY(-4px);
+	border-color: #2563eb;
+}
+
+.uni-card-head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.8rem;
+	margin-bottom: 0.6rem;
+}
+
+.uni-title {
+	font-size: 1.05rem;
+	font-weight: 700;
+	color: #1f2937;
+}
+
+.uni-tag {
+	font-size: 0.75rem;
+	font-weight: 600;
+	color: #1d4ed8;
+	background: #e0e7ff;
+	padding: 0.25rem 0.5rem;
+	border-radius: 999px;
+	white-space: nowrap;
+}
+
+.uni-meta {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 0.35rem;
+	margin: 0.6rem 0 0.8rem;
+}
+
+.uni-meta-item {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	color: #6b7280;
+	font-size: 0.9rem;
+}
+
+.uni-specializations {
+	margin: 0.8rem 0;
+	padding: 0.8rem;
+	background: #f8fafc;
+	border-radius: 8px;
+	border: 1px solid #e5e7eb;
+}
+
+.specs-title {
+	font-size: 0.9rem;
+	font-weight: 600;
+	color: #374151;
+	margin-bottom: 0.6rem;
+}
+
+.spec-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.4rem 0;
+	border-bottom: 1px solid #e5e7eb;
+}
+
+.spec-item:last-child {
+	border-bottom: none;
+}
+
+.spec-name {
+	font-size: 0.85rem;
+	color: #4b5563;
+	font-weight: 500;
+}
+
+.spec-score {
+	font-size: 0.8rem;
+	color: #059669;
+	font-weight: 600;
+	background: #d1fae5;
+	padding: 0.2rem 0.5rem;
+	border-radius: 4px;
+}
+
+.uni-actions {
+	display: flex;
+	justify-content: center;
+	margin-top: 0.5rem;
+}
+
+.uni-actions .btn {
+	font-size: 0.85rem;
+	padding: 0.6rem 1.2rem;
+}
+
+.uni-empty {
+	text-align: center;
+	color: #6b7280;
+	padding: 2rem 0;
 } 
