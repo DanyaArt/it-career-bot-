@@ -200,6 +200,18 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
+.floating-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.floating-card-link:hover .floating-card {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
 .floating-card:nth-child(1) {
     animation-delay: 0s;
 }
